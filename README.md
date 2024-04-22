@@ -11,5 +11,7 @@ localhost:5672 adalah alamat server tempat broker pesan berjalan. "localhost" be
 
 ![queue](image.png)
 
-Pada gambar diatas dapat dilihat kalau pada suatu saat sempat terdapat 15 message pada queue. Ini terjadi akibat subscribernya perlu waktu lebih lama untuk mengelola tiap event yang berada di message queue sehingga terjadi penumpukkan message karena lebih cepat publisher meng-publish message daripada subscriber membuat message. 
+Dalam gambar tersebut terlihat ada 20 pesan yang tertumpuk dalam antrian. Kondisi ini muncul karena subscriber membutuhkan waktu tambahan untuk memproses setiap event yang masuk ke dalam antrian pesan, yang mengakibatkan akumulasi pesan. Hal ini terjadi karena laju pengiriman pesan oleh publisher melebihi kecepatan subscriber dalam mengonsumsi pesan tersebut.
+
+
 
